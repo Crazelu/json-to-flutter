@@ -1,0 +1,44 @@
+{
+    "backgroundColor": "0xff08cca9",
+    "dismissButtonColor": "0xff08cca9",
+    "shouldShowDismiss": true,
+    "isDismissWithBackbuttonEnabled": false,
+    "dismissErrorMessage": "Click button to dismiss",
+    "widgets": [
+        {
+            "widget": "text",
+            "schema": {
+                "text": "Hey your order is ready!",
+                "textAlignment": "center",
+                "style": {
+                    "fontSize": 25.0,
+                    "fontWeight": "bold",
+                    "color": "0xffffffff"
+                },
+                "verticalPadding": 30.0
+            }
+        },
+        {
+            "widget": "image",
+            "schema": {
+                "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                "size": {
+                    "width": 300.0,
+                    "height": 300.0
+                },
+                "verticalPadding": 30.0
+            }
+        },
+        {
+            "widget": "button",
+            "schema": {
+                "text": "Got it",
+                "fontSize": 18.0,
+                "shape": {
+                    "shape": "rectangular",
+                    "radius": 10.0
+                }
+            }
+        }
+    ]
+}
