@@ -108,6 +108,7 @@ class JsonUIDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: jsonUI.backgroundColor,
         appBar: AppBar(
@@ -134,14 +135,8 @@ class JsonUIDialog extends StatelessWidget {
 
             return Future.value(false);
           },
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: jsonUI.widgets,
-              ),
-            ),
-          ),
+          child: Container(
+              height: size.height, width: size.width, child: jsonUI.widget),
         ));
   }
 }

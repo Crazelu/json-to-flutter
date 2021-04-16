@@ -7,14 +7,14 @@ class JsonUI {
   final Color dismissButtonColor;
   final Color dismissIconColor;
   final bool shouldShowDismiss;
-  final List<Widget> widgets;
+  final Widget widget;
 
   JsonUI(
       {this.backgroundColor: kPrimaryColorDark,
       this.dismissIconColor: kPrimaryColorLight,
       this.dismissButtonColor: kButtonSplashColor,
       this.shouldShowDismiss: true,
-      this.widgets: const <Widget>[]});
+      this.widget: const SizedBox()});
 
   factory JsonUI.fromJson(Map<String, dynamic> json) {
     return JsonUI(
@@ -25,7 +25,7 @@ class JsonUI {
                 kButtonSplashColor.value),
         dismissIconColor: Color(int.tryParse(json['dismissIconColor'] ?? '') ??
             kPrimaryColorLight.value),
-        shouldShowDismiss: json['shouldShowDismiss']??true,
-        widgets: JsonUIUtils.getWidgets(json['widgets']));
+        shouldShowDismiss: json['shouldShowDismiss'] ?? true,
+        widget: JsonUIUtils.getWidgetFromJson(json));
   }
 }

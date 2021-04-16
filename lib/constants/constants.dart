@@ -14,3 +14,5 @@ const String kDismissPage = "dismissPage";
 const double kDefaultFontSize = 14;
 
 const SizedBox kVerticalSpace = SizedBox(height: 10);
+
+const int kDefaultFlex = 1;

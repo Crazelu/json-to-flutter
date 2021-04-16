@@ -3,7 +3,8 @@
     "dismissIconColor": "0xff000000",
     "dismissButtonColor": "0xffffffff",
     "shouldShowDismiss": true,
-    "widgets": [
+    "type": "column",
+    "children": [
         {
             "type": "text",
             "data": "Hey Lucky!\nWe put these together just for you.",
@@ -108,14 +109,22 @@
             ]
         },
         {
-            "type": "image",
-            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-            "size": {
-                "width": 300.0,
-                "height": 300.0
-            },
-            "borderRadius": 10.0,
-            "verticalPadding": 15.0
+            "type": "expanded",
+            "flex": 2,
+            "child": {
+                "type": "image",
+                "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                "size": {
+                    "width": 300.0,
+                    "height": 300.0
+                },
+                "borderRadius": 10.0,
+                "verticalPadding": 15.0
+            }
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 20.0
         },
         {
             "type": "text",
@@ -139,35 +148,8 @@
             "verticalPadding": 30.0
         },
         {
-            "type": "image",
-            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-            "size": {
-                "width": 300.0,
-                "height": 300.0
-            },
-            "borderRadius": 10.0,
-            "verticalPadding": 15.0
-        },
-        {
-            "type": "text",
-            "data": "Pepperoni pizza fresh outta the oven",
-            "textAlignment": "center",
-            "style": {
-                "fontSize": 16.0,
-                "fontWeight": "400",
-                "color": "0xffffffff"
-            },
-            "verticalPadding": 30.0
-        },
-        {
-            "type": "button",
-            "text": "Order",
-            "fontSize": 18.0,
-            "shape": {
-                "shape": "rectangular",
-                "radius": 10.0
-            },
-            "verticalPadding": 30.0
+            "type": "verticalSpacer",
+            "height": 20.0
         }
     ]
 }
