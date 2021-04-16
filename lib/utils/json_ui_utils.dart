@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:json_to_flutter/models/ui/button.dart';
 import 'package:json_to_flutter/models/ui/center.dart';
+import 'package:json_to_flutter/models/ui/circle_avatar.dart';
 import 'package:json_to_flutter/models/ui/column.dart';
 import 'package:json_to_flutter/models/ui/expanded.dart';
 import 'package:json_to_flutter/models/ui/image.dart';
+import 'package:json_to_flutter/models/ui/inkwell.dart';
 import 'package:json_to_flutter/models/ui/listview.dart';
 import 'package:json_to_flutter/models/ui/padding.dart';
 import 'package:json_to_flutter/models/ui/row.dart';
@@ -33,7 +35,7 @@ class JsonUIUtils {
         return JsonText.fromJson(json).toWidget();
       case 'row':
         return JsonRow.fromJson(json).toWidget();
-      case 'listView':
+      case 'listview':
         return JsonListView.fromJson(json).toWidget();
       case 'column':
         return JsonColumn.fromJson(json).toWidget();
@@ -47,6 +49,10 @@ class JsonUIUtils {
         return JsonCenter.fromJson(json).toWidget();
       case 'padding':
         return JsonPadding.fromJson(json).toWidget();
+      case 'inkwell':
+        return JsonInkWell.fromJson(json).toWidget();
+      case 'circleAvatar':
+        return JsonCircleAvatar.fromJson(json).toWidget();
 
       default:
         return Container();
