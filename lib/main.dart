@@ -36,14 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
-      loadJson();
-    });
   }
 
-  void loadJson() async {
-    String data =
-        await DefaultAssetBundle.of(context).loadString("assets/netflix.json");
+  void loadJson(String asset) async {
+    String data = await DefaultAssetBundle.of(context).loadString(asset);
     _json = json.decode(data);
     _ui = JsonUI.fromJson(_json);
     setState(() {});
@@ -54,6 +50,20 @@ class _MyHomePageState extends State<MyHomePage> {
               JsonUIDialog(jsonUI: _ui!)));
     }
   }
+
+  final kVerticalSpace = SizedBox(height: 10);
+
+  TextButton getButton(String text, String asset) => TextButton(
+      style: ButtonStyle(
+          minimumSize:
+              MaterialStateProperty.resolveWith((states) => Size(200, 80)),
+          backgroundColor: MaterialStateProperty.resolveWith(
+              (states) => kButtonBackgroundColor)),
+      onPressed: () {
+        loadJson("assets/$asset.json");
+      },
+      child: Text(text,
+          style: TextStyle(fontSize: 18, color: kPrimaryColorLight)));
 
   @override
   Widget build(BuildContext context) {
@@ -70,28 +80,11 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Nothing to see here on gad",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.teal),
-              ),
-              SizedBox(height: 30),
-              if (_ui != null)
-                TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.resolveWith(
-                            (states) => kButtonBackgroundColor)),
-                    onPressed: () {
-                      Navigator.of(context).push(PageRouteBuilder(
-                          opaque: false,
-                          pageBuilder: (context, primary, secondary) =>
-                              JsonUIDialog(jsonUI: _ui!)));
-                    },
-                    child: Text('Open full screen dialog',
-                        style:
-                            TextStyle(fontSize: 15, color: kPrimaryColorLight)))
+              getButton('Open Foodr dialog', 'test_json'),
+              kVerticalSpace,
+              getButton('Open Netflix dialog', 'netflix'),
+              kVerticalSpace,
+              getButton('Open Abeg dialog', 'abeg'),
             ],
           ),
         ));

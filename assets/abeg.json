@@ -1,0 +1,71 @@
+{
+    "backgroundColor": "0xff753ff6",
+    "dismissIconColor": "0xffffffff",
+    "dismissButtonColor": "0xff8a5cf7",
+    "shouldShowDismiss": true,
+    "isFullScreen": true,
+    "size": {
+        "height": 400,
+        "width": 400
+    },
+    "type": "listview",
+    "children": [
+        {
+            "type": "verticalSpacer",
+            "height": 15.0
+        },
+        {
+            "type": "image",
+            "imageUrl": "https://play-lh.googleusercontent.com/Du1MJqGw7EvXrlNZlLWV4YgkJLmqqKWUkx-gtpszAePQo0z-TS4na29lmrlkPFmuNyE3",
+            "size": {
+                "width": 80.0,
+                "height": 80.0
+            },
+            "borderRadius": 10.0,
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 20.0
+        },
+        {
+            "type": "text",
+            "data": "You made it rain!",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 28.0,
+                "fontWeight": "800",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "image",
+            "imageUrl": "https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Faa268947-a842-48b3-bf5e-73800690aaf0_1600x1362.jpeg",
+            "size": {
+                "width": 300.0,
+                "height": 300.0
+            },
+            "borderRadius": 10.0
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 30.0
+        },
+        {
+            "type": "center",
+            "child": {
+                "type": "text",
+                "data": "100 Ejikems on their way to Ichtrojan and 5 others",
+                "textAlignment": "center",
+                "style": {
+                    "fontSize": 18.0,
+                    "fontWeight": "400",
+                    "color": "0xffffffff"
+                },
+                "width": 250.0,
+                "verticalPadding": 30.0
+            }
+        }
+    ]
+}

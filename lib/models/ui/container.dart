@@ -55,6 +55,7 @@ class JsonContainer {
   }
 
   Widget toWidget() => Container(
+        constraints: BoxConstraints(minWidth: width ?? 0),
         width: width,
         height: height,
         child: child,

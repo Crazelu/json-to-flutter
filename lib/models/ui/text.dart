@@ -9,6 +9,8 @@ class JsonText {
   final int? maxLines;
   final JsonTextStyle? style;
   final double verticalPadding;
+  final double? height;
+  final double? width;
 
   JsonText(
       {required this.data,
@@ -17,6 +19,8 @@ class JsonText {
       this.softWrap,
       this.maxLines,
       this.style,
+      this.height,
+      this.width,
       this.verticalPadding: 0});
 
   factory JsonText.fromJson(Map<String, dynamic> json) {
@@ -24,6 +28,8 @@ class JsonText {
         data: json['data'],
         softWrap: json['softWrap'],
         maxLines: json['maxLines'],
+        height: json['height'] == null ? null : json['height'],
+        width: json['width'] == null ? null : json['width'],
         style: JsonTextStyle.fromJson(json['style']),
         overflow: _getOverflow(json['overflow']),
         textAlign: _getAlignment(json['textAlignment']),
@@ -32,6 +38,7 @@ class JsonText {
 
   Widget toWidget() {
     return Container(
+        constraints: BoxConstraints(maxWidth: width ?? double.infinity),
         padding: EdgeInsets.only(bottom: verticalPadding),
         child: Text(
           data,

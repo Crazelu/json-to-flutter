@@ -170,7 +170,7 @@
                                         },
                                         {
                                             "type": "text",
-                                            "data": "720p",
+                                            "data": "480p",
                                             "textAlignment": "center",
                                             "style": {
                                                 "fontSize": 14.0,
@@ -418,7 +418,7 @@
                                         },
                                         {
                                             "type": "text",
-                                            "data": "4K (Hehe)",
+                                            "data": "4K+HDR",
                                             "textAlignment": "center",
                                             "style": {
                                                 "fontSize": 14.0,
