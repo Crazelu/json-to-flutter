@@ -3,6 +3,7 @@ import 'package:json_to_flutter/models/ui/button.dart';
 import 'package:json_to_flutter/models/ui/center.dart';
 import 'package:json_to_flutter/models/ui/circle_avatar.dart';
 import 'package:json_to_flutter/models/ui/column.dart';
+import 'package:json_to_flutter/models/ui/container.dart';
 import 'package:json_to_flutter/models/ui/expanded.dart';
 import 'package:json_to_flutter/models/ui/image.dart';
 import 'package:json_to_flutter/models/ui/inkwell.dart';
@@ -53,6 +54,8 @@ class JsonUIUtils {
         return JsonInkWell.fromJson(json).toWidget();
       case 'circleAvatar':
         return JsonCircleAvatar.fromJson(json).toWidget();
+      case 'container':
+        return JsonContainer.fromJson(json).toWidget();
 
       default:
         return Container();

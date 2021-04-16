@@ -1,0 +1,218 @@
+{
+    "backgroundColor": "0xff000000",
+    "dismissIconColor": "0xffffffff",
+    "dismissButtonColor": "0xffe30813",
+    "shouldShowDismiss": true,
+    "isFullScreen": true,
+    "size": {
+        "height": 400,
+        "width": 400
+    },
+    "type": "listview",
+    "children": [
+        {
+            "type": "verticalSpacer",
+            "height": 20.0
+        },
+        {
+            "type": "image",
+            "imageUrl": "https://simg.nicepng.com/png/small/151-1510639_netflix-app-icon-png.png",
+            "size": {
+                "width": 100.0,
+                "height": 100.0
+            },
+            "borderRadius": 10.0,
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 20.0
+        },
+        {
+            "type": "text",
+            "data": "Welcome back Lucky!\nLet's setup your account.",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 28.0,
+                "fontWeight": "800",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "text",
+            "data": "Choose the plan that’s right for you",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 18.0,
+                "fontWeight": "bold",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 5.0
+        },
+        {
+            "type": "text",
+            "data": "Watch anywhere, cancel anytime.",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 15.0,
+                "fontWeight": "400",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "column",
+            "children": [
+                {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "inkwell",
+                            "splashColor": "0xffef6b72",
+                            "child": {
+                                "type": "container",
+                                "height": 120.0,
+                                "width": 120.0,
+                                "color": "0xffe50914",
+                                "radius": 10.0,
+                                "alignment": "center",
+                                "child": {
+                                    "type": "text",
+                                    "data": "Basic",
+                                    "textAlignment": "center",
+                                    "style": {
+                                        "fontSize": 18.0,
+                                        "fontWeight": "600",
+                                        "color": "0xffffffff"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "verticalSpacer",
+                            "height": 10.0
+                        },
+                        {
+                            "type": "row",
+                            "horizontalSpacing": 5.0,
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "data": "Monthly price: ",
+                                    "textAlignment": "center",
+                                    "style": {
+                                        "fontSize": 16.0,
+                                        "fontWeight": "700",
+                                        "color": "0xffffffff"
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "data": "₦2,900",
+                                    "textAlignment": "center",
+                                    "style": {
+                                        "fontSize": 14.0,
+                                        "fontWeight": "bold",
+                                        "color": "0xffffffff"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "verticalSpacer",
+                    "height": 20.0
+                },
+                {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "inkwell",
+                            "splashColor": "0xffef6b72",
+                            "child": {
+                                "type": "container",
+                                "height": 120.0,
+                                "width": 120.0,
+                                "color": "0xffe50914",
+                                "radius": 10.0,
+                                "alignment": "center",
+                                "child": {
+                                    "type": "text",
+                                    "data": "Standard",
+                                    "textAlignment": "center",
+                                    "style": {
+                                        "fontSize": 18.0,
+                                        "fontWeight": "600",
+                                        "color": "0xffffffff"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "verticalSpacer",
+                            "height": 10.0
+                        },
+                        {
+                            "type": "text",
+                            "data": "₦3,600",
+                            "textAlignment": "center",
+                            "style": {
+                                "fontSize": 14.0,
+                                "fontWeight": "bold",
+                                "color": "0xffffffff"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "verticalSpacer",
+                    "height": 20.0
+                },
+                {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "inkwell",
+                            "splashColor": "0xffef6b72",
+                            "child": {
+                                "type": "container",
+                                "height": 120.0,
+                                "width": 120.0,
+                                "color": "0xffe50914",
+                                "radius": 10.0,
+                                "alignment": "center",
+                                "child": {
+                                    "type": "text",
+                                    "data": "Premium",
+                                    "textAlignment": "center",
+                                    "style": {
+                                        "fontSize": 18.0,
+                                        "fontWeight": "600",
+                                        "color": "0xffffffff"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "verticalSpacer",
+                            "height": 10.0
+                        },
+                        {
+                            "type": "text",
+                            "data": "₦4,400",
+                            "textAlignment": "center",
+                            "style": {
+                                "fontSize": 14.0,
+                                "fontWeight": "bold",
+                                "color": "0xffffffff"
+                            },
+                            "verticalPadding": 30.0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

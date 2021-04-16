@@ -42,8 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void loadJson() async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString("assets/test_json.json");
+    String data =
+        await DefaultAssetBundle.of(context).loadString("assets/netflix.json");
     _json = json.decode(data);
     _ui = JsonUI.fromJson(_json);
     setState(() {});
