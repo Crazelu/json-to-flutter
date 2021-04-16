@@ -3,6 +3,7 @@ import 'package:json_to_flutter/models/ui/button.dart';
 import 'package:json_to_flutter/models/ui/column.dart';
 import 'package:json_to_flutter/models/ui/expanded.dart';
 import 'package:json_to_flutter/models/ui/image.dart';
+import 'package:json_to_flutter/models/ui/listview.dart';
 import 'package:json_to_flutter/models/ui/row.dart';
 import 'package:json_to_flutter/models/ui/text.dart';
 import 'package:json_to_flutter/models/ui/vertical_spacer.dart';
@@ -29,6 +30,8 @@ class JsonUIUtils {
         return JsonText.fromJson(json).toWidget();
       case 'row':
         return JsonRow.fromJson(json).toWidget();
+      case 'listView':
+        return JsonListView.fromJson(json).toWidget();
       case 'column':
         return JsonColumn.fromJson(json).toWidget();
       case 'expanded':
