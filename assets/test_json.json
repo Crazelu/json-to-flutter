@@ -38,39 +38,96 @@
                 "horizontalSpacing": 5.0,
                 "widgets": [
                     {
-                        "widget": "image",
+                        "widget": "column",
                         "schema": {
-                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                            "size": {
-                                "width": 80.0,
-                                "height": 80.0
-                            },
-                            "borderRadius": 10.0,
-                            "verticalPadding": 15.0
+                            "widgets": [
+                                {
+                                    "widget": "image",
+                                    "schema": {
+                                        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                                        "size": {
+                                            "width": 80.0,
+                                            "height": 80.0
+                                        },
+                                        "borderRadius": 10.0,
+                                        "verticalPadding": 15.0
+                                    }
+                                },
+                                {
+                                    "widget": "text",
+                                    "schema": {
+                                        "text": "Yummy",
+                                        "textAlignment": "center",
+                                        "style": {
+                                            "fontSize": 15.0,
+                                            "color": "0xffffffff"
+                                        },
+                                        "verticalPadding": 30.0
+                                    }
+                                }
+                            ]
                         }
                     },
                     {
-                        "widget": "image",
+                        "widget": "column",
                         "schema": {
-                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                            "size": {
-                                "width": 80.0,
-                                "height": 80.0
-                            },
-                            "borderRadius": 10.0,
-                            "verticalPadding": 15.0
+                            "widgets": [
+                                {
+                                    "widget": "image",
+                                    "schema": {
+                                        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                                        "size": {
+                                            "width": 80.0,
+                                            "height": 80.0
+                                        },
+                                        "borderRadius": 10.0,
+                                        "verticalPadding": 15.0
+                                    }
+                                },
+                                {
+                                    "widget": "text",
+                                    "schema": {
+                                        "text": "Delish",
+                                        "textAlignment": "center",
+                                        "style": {
+                                            "fontSize": 15.0,
+                                            "color": "0xffffffff"
+                                        },
+                                        "verticalPadding": 30.0
+                                    }
+                                }
+                            ]
                         }
                     },
                     {
-                        "widget": "image",
+                        "widget": "column",
                         "schema": {
-                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                            "size": {
-                                "width": 80.0,
-                                "height": 80.0
-                            },
-                            "borderRadius": 10.0,
-                            "verticalPadding": 15.0
+                            "widgets": [
+                                {
+                                    "widget": "image",
+                                    "schema": {
+                                        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                                        "size": {
+                                            "width": 80.0,
+                                            "height": 80.0
+                                        },
+                                        "borderRadius": 10.0,
+                                        "verticalPadding": 15.0
+                                    }
+                                },
+                                {
+                                    "widget": "text",
+                                    "schema": {
+                                        "text": "Hmmmm",
+                                        "textAlignment": "center",
+                                        "style": {
+                                            "fontSize": 15.0,
+                                            "color": "0xffffffff"
+                                        },
+                                        "verticalPadding": 30.0
+                                    }
+                                }
+                            ]
                         }
                     }
                 ]

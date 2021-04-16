@@ -30,8 +30,8 @@ class JsonUI {
         dismissIconColor: Color(int.tryParse(json['dismissIconColor'] ?? '') ??
             kPrimaryColorLight.value),
         isDismissWithBackbuttonEnabled: json['isDismissWithBackbuttonEnabled'],
-        shouldShowDismiss: json['shouldShowDismiss'],
-        dismissErrorMessage: json['dismissErrorMessage'],
+        shouldShowDismiss: json['shouldShowDismiss']??true,
+        dismissErrorMessage: json['dismissErrorMessage']??'',
         widgets: JsonUIUtils.getWidgets(json['widgets']));
   }
 }

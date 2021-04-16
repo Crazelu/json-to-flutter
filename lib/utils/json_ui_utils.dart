@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_to_flutter/models/ui/button.dart';
+import 'package:json_to_flutter/models/ui/column.dart';
 import 'package:json_to_flutter/models/ui/image.dart';
 import 'package:json_to_flutter/models/ui/row.dart';
 import 'package:json_to_flutter/models/ui/text.dart';
@@ -30,6 +31,11 @@ class JsonUIUtils {
           JsonRow row = JsonRow.fromJson(widget['schema']);
           widgets.add(row.toWidget());
           widgets.add(SizedBox(height: row.verticalPadding));
+          break;
+        case 'column':
+          JsonColumn column = JsonColumn.fromJson(widget['schema']);
+          widgets.add(column.toWidget());
+          widgets.add(SizedBox(height: column.verticalPadding));
           break;
         default:
       }
