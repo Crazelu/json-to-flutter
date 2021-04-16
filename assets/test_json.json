@@ -142,7 +142,7 @@
             "text": "Order",
             "fontSize": 18.0,
             "shape": {
-                "shape": "rectangular",
+                "shape": "circular",
                 "radius": 10.0
             },
             "verticalPadding": 30.0

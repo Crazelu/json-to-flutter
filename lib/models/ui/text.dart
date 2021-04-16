@@ -86,7 +86,8 @@ class JsonTextStyle {
       this.fontWeight: '',
       this.textColor: kPrimaryColorDark});
 
-  factory JsonTextStyle.fromJson(Map<String, dynamic> json) {
+  factory JsonTextStyle.fromJson(Map<String, dynamic>? json) {
+    if (json == null) return JsonTextStyle();
     if (json['color'] != null) {
       return JsonTextStyle(
           fontSize: json['fontSize'],

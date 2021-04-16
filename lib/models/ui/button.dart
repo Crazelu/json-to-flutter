@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:json_to_flutter/constants/constants.dart';
 import 'package:json_to_flutter/models/api/request.dart';
+import 'package:json_to_flutter/utils/json_ui_utils.dart';
 import 'package:json_to_flutter/utils/method_channel.dart';
 
 class JsonButton {
@@ -8,6 +9,7 @@ class JsonButton {
   final Color textColor;
   final Color splashColor;
   final String text;
+  final Widget? child;
   final double verticalPadding;
   final double fontSize;
   final OutlinedBorder? shape;
@@ -23,6 +25,7 @@ class JsonButton {
       this.verticalPadding: 0,
       this.fontSize: kDefaultFontSize,
       this.shape,
+      this.child,
       this.requestParams,
       this.methodName});
 
@@ -36,6 +39,9 @@ class JsonButton {
         splashColor: Color(int.tryParse(json['splashColor'].toString()) ??
             kButtonSplashColor.value),
         text: json['text'],
+        child: json['child'] == null
+            ? null
+            : JsonUIUtils.getWidgetFromJson(json['child']),
         verticalPadding: json["verticalPadding"] ?? 0,
         fontSize: json["fontSize"] ?? kDefaultFontSize,
         methodName: json['methodName'],
@@ -47,6 +53,8 @@ class JsonButton {
     switch (json!['shape']) {
       case 'stadium':
         return StadiumBorder();
+      case 'circular':
+        return CircleBorder();
       case 'rectangular':
         return RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(json['radius']));
@@ -71,6 +79,6 @@ class JsonButton {
         onPressed: () {
           JsonMethodChannel().invokeMethod(methodName, params: requestParams);
         },
-        child: Text(text));
+        child: child ?? Text(text));
   }
 }
