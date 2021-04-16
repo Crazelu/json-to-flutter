@@ -5,16 +5,19 @@ class JsonRow {
   final List<Widget> children;
   final double verticalPadding;
   final double horizontalSpacing;
+  final double verticalSpacing; //space between runs on different lines
 
   JsonRow(
       {required this.children,
       this.verticalPadding: 0,
+      this.verticalSpacing: 0,
       this.horizontalSpacing: 10});
 
   factory JsonRow.fromJson(Map<String, dynamic> json) {
     return JsonRow(
         children: JsonUIUtils.getWidgets(json['children']),
         verticalPadding: json["verticalPadding"] ?? 0,
+        verticalSpacing: json['verticalSpacing'] ?? 0,
         horizontalSpacing: json["horizontalSpacing"] ?? 0);
   }
 
@@ -22,7 +25,7 @@ class JsonRow {
     return Wrap(
       alignment: WrapAlignment.center,
       spacing: horizontalSpacing,
-      runSpacing: horizontalSpacing,
+      runSpacing: verticalSpacing,
       children: children,
     );
   }

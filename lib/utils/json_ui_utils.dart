@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:json_to_flutter/models/ui/button.dart';
+import 'package:json_to_flutter/models/ui/center.dart';
 import 'package:json_to_flutter/models/ui/column.dart';
 import 'package:json_to_flutter/models/ui/expanded.dart';
 import 'package:json_to_flutter/models/ui/image.dart';
 import 'package:json_to_flutter/models/ui/listview.dart';
+import 'package:json_to_flutter/models/ui/padding.dart';
 import 'package:json_to_flutter/models/ui/row.dart';
+import 'package:json_to_flutter/models/ui/spacer.dart';
 import 'package:json_to_flutter/models/ui/text.dart';
 import 'package:json_to_flutter/models/ui/vertical_spacer.dart';
 
@@ -38,6 +41,12 @@ class JsonUIUtils {
         return JsonExpanded.fromJson(json).toWidget();
       case 'verticalSpacer':
         return JsonVerticalSpacer.fromJson(json).toWidget();
+      case 'spacer':
+        return JsonSpacer.fromJson(json).toWidget();
+      case 'center':
+        return JsonCenter.fromJson(json).toWidget();
+      case 'padding':
+        return JsonPadding.fromJson(json).toWidget();
 
       default:
         return Container();

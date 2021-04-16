@@ -3,6 +3,11 @@
     "dismissIconColor": "0xff000000",
     "dismissButtonColor": "0xffffffff",
     "shouldShowDismiss": true,
+    "isFullScreen": true,
+    "size": {
+        "height": 400,
+        "width": 400
+    },
     "type": "column",
     "children": [
         {
@@ -29,7 +34,7 @@
         {
             "type": "row",
             "verticalPadding": 30.0,
-            "horizontalSpacing": 5.0,
+            "horizontalSpacing": 10.0,
             "children": [
                 {
                     "type": "column",
@@ -128,7 +133,7 @@
         },
         {
             "type": "text",
-            "data": "Pepperoni pizza fresh outta the oven",
+            "data": "Fresh hot outta the oven",
             "textAlignment": "center",
             "style": {
                 "fontSize": 16.0,
@@ -142,7 +147,7 @@
             "text": "Order",
             "fontSize": 18.0,
             "shape": {
-                "shape": "circular",
+                "shape": "rectangular",
                 "radius": 10.0
             },
             "verticalPadding": 30.0
