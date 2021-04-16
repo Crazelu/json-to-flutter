@@ -1,0 +1,67 @@
+{
+    "backgroundColor": "0xff0fdba8",
+    "dismissIconColor": "0xffffffff",
+    "dismissButtonColor": "0xff0b5b41",
+    "shouldShowDismiss": true,
+    "isFullScreen": true,
+    "size": {
+        "height": 400,
+        "width": 400
+    },
+    "type": "listview",
+    "children": [
+        {
+            "type": "center",
+            "child": {
+                "type": "circleAvatar",
+                "radius": 30.0,
+                "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQGyWYlu5VgtpA/company-logo_200_200/0/1570814861373?e=2159024400&v=beta&t=WIjCrD28MnP6uA83WKq07oMCVM00x4dWbsah8rYsk38"
+            }
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 10.0
+        },
+        {
+            "type": "text",
+            "data": "SE-what? We gat you!",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 30.0,
+                "fontWeight": "800",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 20.0
+        },
+        {
+            "type": "image",
+            "imageUrl": "https://ci6.googleusercontent.com/proxy/xDsRYIjp-sY-YvJONM5DE6rFhsBjaZkETvtfI38fvmGVn8WrKTCaf0Penf5bGFT_4tZXraFJ38fE4VmDD8p8Hf-bkRGH1TH6hQWySaA5BiYAX8orUObKOarR_SL66Q=s0-d-e1-ft#https://userimg-bee.customeriomail.com/images/client-env-89804/SEC_Safe.jpg",
+            "size": {
+                "width": 250.0,
+                "height": 250.0
+            }
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 20.0
+        },
+        {
+            "type": "padding",
+            "padding": {
+                "left": 10.0,
+                "right": 10.0
+            },
+            "child": {
+                "type": "text",
+                "data": "   Please be assured that your assets are safe on Bamboo and that you will always have easy access to your funds and assets on the Bamboo Platform. We are still able to carry out all our operations and will continue to do so.\n\n   By opening a Bamboo account, you have also opened an account with our US broker partner, DriveWeath LLC. DriveWealth is licensed by the U.S. Securities and Exchange Commission and is also a member of the Financial Industry Regulatory Authority (FINRA) and the U.S. Securities Investor Protection Corporation (SIPC).\n\n   The SIPC insures your Bamboo account up to $500,000. All your wallet balances on Bamboo are insured up to $250,000 by the U.S. Federal Deposit Insurance Corporation (FDIC).\n\n   If you have any questions please don’t hesitate to contact us at support@investbamboo.com.\n\n   Once again, thank you for your continued faith and trust in us. We will continue to do our best to serve you.\n\nBest,\nRichmond Bassey,\nCEO, Bamboo",
+                "textAlignment": "left",
+                "style": {
+                    "fontSize": 16.0,
+                    "fontWeight": "400",
+                    "color": "0xffffffff"
+                },
+                "verticalPadding": 30.0
+            }
+        }
+    ]
+}

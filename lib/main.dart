@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         backgroundColor: kPrimaryColorLight,
         appBar: AppBar(
-          backgroundColor: kPrimaryColorDark,
+          backgroundColor: Colors.redAccent,
           elevation: 0,
           centerTitle: true,
           title: Text("JSON to Flutter UI Demo",
@@ -80,12 +80,16 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              getButton('Open Foodr dialog', 'test_json'),
+              getButton('Open Foodr dialog', 'test_json',
+                  color: Colors.greenAccent),
               kVerticalSpace,
               getButton('Open Netflix dialog', 'netflix',
                   color: Color(0xffe30813)),
               kVerticalSpace,
               getButton('Open Abeg dialog', 'abeg', color: Color(0xff753ff6)),
+              kVerticalSpace,
+              getButton('Open Bamboo dialog', 'bamboo',
+                  color: Color(0xff0fdba8)),
             ],
           ),
         ));
