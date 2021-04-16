@@ -10,6 +10,7 @@ import 'package:json_to_flutter/models/ui/inkwell.dart';
 import 'package:json_to_flutter/models/ui/listview.dart';
 import 'package:json_to_flutter/models/ui/padding.dart';
 import 'package:json_to_flutter/models/ui/row.dart';
+import 'package:json_to_flutter/models/ui/wrap.dart';
 import 'package:json_to_flutter/models/ui/spacer.dart';
 import 'package:json_to_flutter/models/ui/text.dart';
 import 'package:json_to_flutter/models/ui/vertical_spacer.dart';
@@ -36,6 +37,8 @@ class JsonUIUtils {
         return JsonText.fromJson(json).toWidget();
       case 'row':
         return JsonRow.fromJson(json).toWidget();
+      case 'wrap':
+        return JsonWrap.fromJson(json).toWidget();
       case 'listview':
         return JsonListView.fromJson(json).toWidget();
       case 'column':

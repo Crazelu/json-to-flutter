@@ -16,8 +16,8 @@ class JsonColumn {
   factory JsonColumn.fromJson(Map<String, dynamic> json) {
     return JsonColumn(
         children: JsonUIUtils.getWidgets(json['children']),
-        mainAxisAlignment: _getAlignment(true, json['alignment']),
-        crossAxisAlignment: _getAlignment(false, json['alignment']),
+        mainAxisAlignment: _getAlignment(true, json['mainAxisAlignment']),
+        crossAxisAlignment: _getAlignment(false, json['crossAxisAlignment']),
         verticalPadding: json['verticalPadding'] ?? 0);
   }
 
@@ -33,15 +33,20 @@ class JsonColumn {
         if (isMainAxisAlignment) return MainAxisAlignment.end;
         return CrossAxisAlignment.end;
       case 'spaceEvenly':
-        return MainAxisAlignment.spaceEvenly;
+        if (isMainAxisAlignment) return MainAxisAlignment.spaceEvenly;
+        return CrossAxisAlignment.center;
       case 'baseline':
-        return CrossAxisAlignment.baseline;
+        if (!isMainAxisAlignment) return CrossAxisAlignment.baseline;
+        return MainAxisAlignment.start;
       case 'stretch':
-        return CrossAxisAlignment.stretch;
+        if (!isMainAxisAlignment) return CrossAxisAlignment.stretch;
+        return MainAxisAlignment.start;
       case 'spaceAround':
-        return MainAxisAlignment.spaceAround;
+        if (isMainAxisAlignment) return MainAxisAlignment.spaceAround;
+        return CrossAxisAlignment.center;
       case 'spaceBetween':
-        return MainAxisAlignment.spaceBetween;
+        if (isMainAxisAlignment) return MainAxisAlignment.spaceBetween;
+        return CrossAxisAlignment.center;
 
       default:
     }

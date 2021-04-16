@@ -12,14 +12,14 @@
     "children": [
         {
             "type": "verticalSpacer",
-            "height": 20.0
+            "height": 15.0
         },
         {
             "type": "image",
             "imageUrl": "https://simg.nicepng.com/png/small/151-1510639_netflix-app-icon-png.png",
             "size": {
-                "width": 100.0,
-                "height": 100.0
+                "width": 80.0,
+                "height": 80.0
             },
             "borderRadius": 10.0,
             "verticalPadding": 30.0
@@ -37,7 +37,7 @@
                 "fontWeight": "800",
                 "color": "0xffffffff"
             },
-            "verticalPadding": 30.0
+            "verticalPadding": 25.0
         },
         {
             "type": "text",
@@ -65,7 +65,8 @@
             "type": "column",
             "children": [
                 {
-                    "type": "column",
+                    "type": "row",
+                    "mainAxisAlignment": "spaceEvenly",
                     "children": [
                         {
                             "type": "inkwell",
@@ -90,32 +91,94 @@
                             }
                         },
                         {
-                            "type": "verticalSpacer",
-                            "height": 10.0
-                        },
-                        {
-                            "type": "row",
-                            "horizontalSpacing": 5.0,
+                            "type": "column",
+                            "crossAxisAlignment": "end",
                             "children": [
                                 {
-                                    "type": "text",
-                                    "data": "Monthly price: ",
-                                    "textAlignment": "center",
-                                    "style": {
-                                        "fontSize": 16.0,
-                                        "fontWeight": "700",
-                                        "color": "0xffffffff"
-                                    }
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Monthly price: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "₦2,900",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
                                 },
                                 {
-                                    "type": "text",
-                                    "data": "₦2,900",
-                                    "textAlignment": "center",
-                                    "style": {
-                                        "fontSize": 14.0,
-                                        "fontWeight": "bold",
-                                        "color": "0xffffffff"
-                                    }
+                                    "type": "verticalSpacer",
+                                    "height": 5.0
+                                },
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Video quality: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "Good",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "verticalSpacer",
+                                    "height": 5.0
+                                },
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Resolution: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "720p",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -126,7 +189,8 @@
                     "height": 20.0
                 },
                 {
-                    "type": "column",
+                    "type": "row",
+                    "mainAxisAlignment": "spaceEvenly",
                     "children": [
                         {
                             "type": "inkwell",
@@ -151,18 +215,96 @@
                             }
                         },
                         {
-                            "type": "verticalSpacer",
-                            "height": 10.0
-                        },
-                        {
-                            "type": "text",
-                            "data": "₦3,600",
-                            "textAlignment": "center",
-                            "style": {
-                                "fontSize": 14.0,
-                                "fontWeight": "bold",
-                                "color": "0xffffffff"
-                            }
+                            "type": "column",
+                            "crossAxisAlignment": "end",
+                            "children": [
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Monthly price: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "₦3,600",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "verticalSpacer",
+                                    "height": 5.0
+                                },
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Video quality: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "Great",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "verticalSpacer",
+                                    "height": 5.0
+                                },
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Resolution: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "1080p",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -171,7 +313,8 @@
                     "height": 20.0
                 },
                 {
-                    "type": "column",
+                    "type": "row",
+                    "mainAxisAlignment": "spaceEvenly",
                     "children": [
                         {
                             "type": "inkwell",
@@ -196,23 +339,104 @@
                             }
                         },
                         {
-                            "type": "verticalSpacer",
-                            "height": 10.0
-                        },
-                        {
-                            "type": "text",
-                            "data": "₦4,400",
-                            "textAlignment": "center",
-                            "style": {
-                                "fontSize": 14.0,
-                                "fontWeight": "bold",
-                                "color": "0xffffffff"
-                            },
-                            "verticalPadding": 30.0
+                            "type": "column",
+                            "crossAxisAlignment": "end",
+                            "children": [
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Monthly price: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "₦4,400",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "verticalSpacer",
+                                    "height": 5.0
+                                },
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Video quality: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "Best",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "verticalSpacer",
+                                    "height": 5.0
+                                },
+                                {
+                                    "type": "wrap",
+                                    "horizontalSpacing": 5.0,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "data": "Resolution: ",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 16.0,
+                                                "fontWeight": "700",
+                                                "color": "0xffffffff"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "data": "4K (Hehe)",
+                                            "textAlignment": "center",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "fontWeight": "bold",
+                                                "color": "0xffffffff"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
             ]
+        },
+        {
+            "type": "verticalSpacer",
+            "height": 20.0
         }
     ]
 }

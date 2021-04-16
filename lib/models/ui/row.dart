@@ -3,29 +3,57 @@ import 'package:json_to_flutter/utils/json_ui_utils.dart';
 
 class JsonRow {
   final List<Widget> children;
-  final double verticalPadding;
-  final double horizontalSpacing;
-  final double verticalSpacing; //space between runs on different lines
+  final MainAxisAlignment? mainAxisAlignment;
+  final CrossAxisAlignment? crossAxisAlignment;
 
   JsonRow(
       {required this.children,
-      this.verticalPadding: 0,
-      this.verticalSpacing: 0,
-      this.horizontalSpacing: 10});
+      this.mainAxisAlignment,
+      this.crossAxisAlignment});
 
   factory JsonRow.fromJson(Map<String, dynamic> json) {
     return JsonRow(
-        children: JsonUIUtils.getWidgets(json['children']),
-        verticalPadding: json["verticalPadding"] ?? 0,
-        verticalSpacing: json['verticalSpacing'] ?? 0,
-        horizontalSpacing: json["horizontalSpacing"] ?? 0);
+      mainAxisAlignment: _getAlignment(true, json['mainAxisAlignment']),
+      crossAxisAlignment: _getAlignment(false, json['crossAxisAlignment']),
+      children: JsonUIUtils.getWidgets(json['children']),
+    );
+  }
+
+  static _getAlignment(bool isMainAxisAlignment, String? alignment) {
+    switch (alignment) {
+      case 'start':
+        if (isMainAxisAlignment) return MainAxisAlignment.start;
+        return CrossAxisAlignment.start;
+      case 'center':
+        if (isMainAxisAlignment) return MainAxisAlignment.center;
+        return CrossAxisAlignment.center;
+      case 'end':
+        if (isMainAxisAlignment) return MainAxisAlignment.end;
+        return CrossAxisAlignment.end;
+      case 'spaceEvenly':
+        if (isMainAxisAlignment) return MainAxisAlignment.spaceEvenly;
+        return CrossAxisAlignment.center;
+      case 'baseline':
+        if (!isMainAxisAlignment) return CrossAxisAlignment.baseline;
+        return MainAxisAlignment.start;
+      case 'stretch':
+        if (!isMainAxisAlignment) return CrossAxisAlignment.stretch;
+        return MainAxisAlignment.start;
+      case 'spaceAround':
+        if (isMainAxisAlignment) return MainAxisAlignment.spaceAround;
+        return CrossAxisAlignment.center;
+      case 'spaceBetween':
+        if (isMainAxisAlignment) return MainAxisAlignment.spaceBetween;
+        return CrossAxisAlignment.center;
+
+      default:
+    }
   }
 
   Widget toWidget() {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: horizontalSpacing,
-      runSpacing: verticalSpacing,
+    return Row(
+      mainAxisAlignment: mainAxisAlignment ?? MainAxisAlignment.start,
+      crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.center,
       children: children,
     );
   }
