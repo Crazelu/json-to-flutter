@@ -3,209 +3,171 @@
     "dismissIconColor": "0xff000000",
     "dismissButtonColor": "0xffffffff",
     "shouldShowDismiss": true,
-    "isDismissWithBackbuttonEnabled": true,
-    "dismissErrorMessage": "Click button to dismiss",
     "widgets": [
         {
-            "widget": "text",
-            "schema": {
-                "text": "Hey Lucky!\nWe put these together just for you",
-                "textAlignment": "center",
-                "style": {
-                    "fontSize": 25.0,
-                    "fontWeight": "800",
-                    "color": "0xffffffff"
-                },
-                "verticalPadding": 30.0
-            }
+            "type": "text",
+            "data": "Hey Lucky!\nWe put these together just for you.",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 25.0,
+                "fontWeight": "800",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
         },
         {
-            "widget": "text",
-            "schema": {
-                "text": "Here are some fresh delicious recipes carefully picked for you. Lorem ipsum type shit. Lorem ipsum type shit",
-                "textAlignment": "center",
-                "style": {
-                    "fontSize": 18.0,
-                    "color": "0xffffffff"
-                },
-                "verticalPadding": 30.0
-            }
-        },
-        {
-            "widget": "row",
-            "schema": {
-                "verticalPadding": 30.0,
-                "horizontalSpacing": 5.0,
-                "widgets": [
-                    {
-                        "widget": "column",
-                        "schema": {
-                            "widgets": [
-                                {
-                                    "widget": "image",
-                                    "schema": {
-                                        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                                        "size": {
-                                            "width": 80.0,
-                                            "height": 80.0
-                                        },
-                                        "borderRadius": 10.0,
-                                        "verticalPadding": 15.0
-                                    }
-                                },
-                                {
-                                    "widget": "text",
-                                    "schema": {
-                                        "text": "Yummy",
-                                        "textAlignment": "center",
-                                        "style": {
-                                            "fontSize": 15.0,
-                                            "color": "0xffffffff"
-                                        },
-                                        "verticalPadding": 30.0
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "widget": "column",
-                        "schema": {
-                            "widgets": [
-                                {
-                                    "widget": "image",
-                                    "schema": {
-                                        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                                        "size": {
-                                            "width": 80.0,
-                                            "height": 80.0
-                                        },
-                                        "borderRadius": 10.0,
-                                        "verticalPadding": 15.0
-                                    }
-                                },
-                                {
-                                    "widget": "text",
-                                    "schema": {
-                                        "text": "Delish",
-                                        "textAlignment": "center",
-                                        "style": {
-                                            "fontSize": 15.0,
-                                            "color": "0xffffffff"
-                                        },
-                                        "verticalPadding": 30.0
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "widget": "column",
-                        "schema": {
-                            "widgets": [
-                                {
-                                    "widget": "image",
-                                    "schema": {
-                                        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                                        "size": {
-                                            "width": 80.0,
-                                            "height": 80.0
-                                        },
-                                        "borderRadius": 10.0,
-                                        "verticalPadding": 15.0
-                                    }
-                                },
-                                {
-                                    "widget": "text",
-                                    "schema": {
-                                        "text": "Hmmmm",
-                                        "textAlignment": "center",
-                                        "style": {
-                                            "fontSize": 15.0,
-                                            "color": "0xffffffff"
-                                        },
-                                        "verticalPadding": 30.0
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "widget": "image",
-            "schema": {
-                "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                "size": {
-                    "width": 300.0,
-                    "height": 300.0
-                },
-                "borderRadius": 10.0,
-                "verticalPadding": 15.0
-            }
-        },
-        {
-            "widget": "text",
-            "schema": {
-                "text": "Pepperoni pizza fresh outta the oven",
-                "textAlignment": "center",
-                "style": {
-                    "fontSize": 16.0,
-                    "fontWeight": "400",
-                    "color": "0xffffffff"
-                },
-                "verticalPadding": 30.0
-            }
-        },
-        {
-            "widget": "button",
-            "schema": {
-                "text": "Order",
+            "type": "text",
+            "data": "Here are some fresh delicious recipes carefully picked for you. Lorem ipsum type shit. Lorem ipsum type shit",
+            "textAlignment": "center",
+            "style": {
                 "fontSize": 18.0,
-                "shape": {
-                    "shape": "rectangular",
-                    "radius": 10.0
-                },
-                "verticalPadding": 30.0
-            }
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
         },
         {
-            "widget": "image",
-            "schema": {
-                "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                "size": {
-                    "width": 300.0,
-                    "height": 300.0
+            "type": "row",
+            "verticalPadding": 30.0,
+            "horizontalSpacing": 5.0,
+            "children": [
+                {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "image",
+                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                            "size": {
+                                "width": 80.0,
+                                "height": 80.0
+                            },
+                            "borderRadius": 10.0,
+                            "verticalPadding": 15.0
+                        },
+                        {
+                            "type": "text",
+                            "data": "Yummy",
+                            "textAlignment": "center",
+                            "style": {
+                                "fontSize": 15.0,
+                                "color": "0xffffffff"
+                            },
+                            "verticalPadding": 30.0
+                        }
+                    ]
                 },
-                "borderRadius": 10.0,
-                "verticalPadding": 15.0
-            }
+                {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "image",
+                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                            "size": {
+                                "width": 80.0,
+                                "height": 80.0
+                            },
+                            "borderRadius": 10.0,
+                            "verticalPadding": 15.0
+                        },
+                        {
+                            "type": "text",
+                            "data": "Delish",
+                            "textAlignment": "center",
+                            "style": {
+                                "fontSize": 15.0,
+                                "color": "0xffffffff"
+                            },
+                            "verticalPadding": 30.0
+                        }
+                    ]
+                },
+                {
+                    "type": "column",
+                    "children": [
+                        {
+                            "type": "image",
+                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+                            "size": {
+                                "width": 80.0,
+                                "height": 80.0
+                            },
+                            "borderRadius": 10.0,
+                            "verticalPadding": 15.0
+                        },
+                        {
+                            "type": "text",
+                            "data": "Hmmmm",
+                            "textAlignment": "center",
+                            "style": {
+                                "fontSize": 15.0,
+                                "color": "0xffffffff"
+                            },
+                            "verticalPadding": 30.0
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "widget": "text",
-            "schema": {
-                "text": "Pepperoni pizza fresh outta the oven",
-                "textAlignment": "center",
-                "style": {
-                    "fontSize": 16.0,
-                    "fontWeight": "400",
-                    "color": "0xffffffff"
-                },
-                "verticalPadding": 30.0
-            }
+            "type": "image",
+            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+            "size": {
+                "width": 300.0,
+                "height": 300.0
+            },
+            "borderRadius": 10.0,
+            "verticalPadding": 15.0
         },
         {
-            "widget": "button",
-            "schema": {
-                "text": "Order",
-                "fontSize": 18.0,
-                "shape": {
-                    "shape": "rectangular",
-                    "radius": 10.0
-                },
-                "verticalPadding": 30.0
-            }
+            "type": "text",
+            "data": "Pepperoni pizza fresh outta the oven",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 16.0,
+                "fontWeight": "400",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "button",
+            "text": "Order",
+            "fontSize": 18.0,
+            "shape": {
+                "shape": "rectangular",
+                "radius": 10.0
+            },
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "image",
+            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
+            "size": {
+                "width": 300.0,
+                "height": 300.0
+            },
+            "borderRadius": 10.0,
+            "verticalPadding": 15.0
+        },
+        {
+            "type": "text",
+            "data": "Pepperoni pizza fresh outta the oven",
+            "textAlignment": "center",
+            "style": {
+                "fontSize": 16.0,
+                "fontWeight": "400",
+                "color": "0xffffffff"
+            },
+            "verticalPadding": 30.0
+        },
+        {
+            "type": "button",
+            "text": "Order",
+            "fontSize": 18.0,
+            "shape": {
+                "shape": "rectangular",
+                "radius": 10.0
+            },
+            "verticalPadding": 30.0
         }
     ]
 }

@@ -7,8 +7,6 @@ class JsonUI {
   final Color dismissButtonColor;
   final Color dismissIconColor;
   final bool shouldShowDismiss;
-  final bool isDismissWithBackbuttonEnabled;
-  final String dismissErrorMessage;
   final List<Widget> widgets;
 
   JsonUI(
@@ -16,8 +14,6 @@ class JsonUI {
       this.dismissIconColor: kPrimaryColorLight,
       this.dismissButtonColor: kButtonSplashColor,
       this.shouldShowDismiss: true,
-      this.isDismissWithBackbuttonEnabled: true,
-      this.dismissErrorMessage: "Action required",
       this.widgets: const <Widget>[]});
 
   factory JsonUI.fromJson(Map<String, dynamic> json) {
@@ -29,9 +25,7 @@ class JsonUI {
                 kButtonSplashColor.value),
         dismissIconColor: Color(int.tryParse(json['dismissIconColor'] ?? '') ??
             kPrimaryColorLight.value),
-        isDismissWithBackbuttonEnabled: json['isDismissWithBackbuttonEnabled'],
         shouldShowDismiss: json['shouldShowDismiss']??true,
-        dismissErrorMessage: json['dismissErrorMessage']??'',
         widgets: JsonUIUtils.getWidgets(json['widgets']));
   }
 }

@@ -11,29 +11,29 @@ class JsonUIUtils {
 
     for (var widget in json) {
       widget = Map<String, dynamic>.from(widget);
-      switch (widget['widget']) {
+      switch (widget['type']) {
         case 'image':
-          JsonImage image = JsonImage.fromJson(widget['schema']);
+          JsonImage image = JsonImage.fromJson(widget);
           widgets.add(image.toWidget());
           widgets.add(SizedBox(height: image.verticalPadding));
 
           break;
         case 'button':
-          JsonButton button = JsonButton.fromJson(widget['schema']);
+          JsonButton button = JsonButton.fromJson(widget);
           widgets.add(button.toWidget());
           widgets.add(SizedBox(height: button.verticalPadding));
           break;
         case 'text':
-          widgets.add(JsonText.fromJson(widget['schema']).toWidget());
+          widgets.add(JsonText.fromJson(widget).toWidget());
 
           break;
         case 'row':
-          JsonRow row = JsonRow.fromJson(widget['schema']);
+          JsonRow row = JsonRow.fromJson(widget);
           widgets.add(row.toWidget());
           widgets.add(SizedBox(height: row.verticalPadding));
           break;
         case 'column':
-          JsonColumn column = JsonColumn.fromJson(widget['schema']);
+          JsonColumn column = JsonColumn.fromJson(widget);
           widgets.add(column.toWidget());
           widgets.add(SizedBox(height: column.verticalPadding));
           break;

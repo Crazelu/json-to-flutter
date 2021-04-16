@@ -130,11 +130,8 @@ class JsonUIDialog extends StatelessWidget {
         ),
         body: WillPopScope(
           onWillPop: () {
-            if (jsonUI.isDismissWithBackbuttonEnabled) {
-              dismiss(context);
-            } else {
-              print(jsonUI.dismissErrorMessage);
-            }
+            dismiss(context);
+
             return Future.value(false);
           },
           child: Center(

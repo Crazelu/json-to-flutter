@@ -21,7 +21,7 @@ class JsonText {
 
   factory JsonText.fromJson(Map<String, dynamic> json) {
     return JsonText(
-        data: json['text'],
+        data: json['data'],
         softWrap: json['softWrap'],
         maxLines: json['maxLines'],
         style: JsonTextStyle.fromJson(json['style']),

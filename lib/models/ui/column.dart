@@ -15,7 +15,7 @@ class JsonColumn {
 
   factory JsonColumn.fromJson(Map<String, dynamic> json) {
     return JsonColumn(
-        children: JsonUIUtils.getWidgets(json['widgets']),
+        children: JsonUIUtils.getWidgets(json['children']),
         mainAxisAlignment: _getAlignment(true, json['alignment']),
         crossAxisAlignment: _getAlignment(false, json['alignment']),
         verticalPadding: json['verticalPadding'] ?? 0);

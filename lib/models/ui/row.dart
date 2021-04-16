@@ -13,7 +13,7 @@ class JsonRow {
 
   factory JsonRow.fromJson(Map<String, dynamic> json) {
     return JsonRow(
-        children: JsonUIUtils.getWidgets(json['widgets']),
+        children: JsonUIUtils.getWidgets(json['children']),
         verticalPadding: json["verticalPadding"] ?? 0,
         horizontalSpacing: json["horizontalSpacing"] ?? 0);
   }
