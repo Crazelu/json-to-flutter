@@ -12,7 +12,7 @@
     "children": [
         {
             "type": "text",
-            "data": "Hey Lucky!\nWe put these together just for you.",
+            "data": "Hey Lucky!\nWe put this together for you.",
             "textAlignment": "center",
             "style": {
                 "fontSize": 25.0,
@@ -23,95 +23,13 @@
         },
         {
             "type": "text",
-            "data": "Here are some fresh delicious recipes carefully picked for you. Lorem ipsum type shit. Lorem ipsum type shit",
+            "data": "Made just how you love it. Lorem ipsum type shit. Lorem ipsum type shit",
             "textAlignment": "center",
             "style": {
                 "fontSize": 18.0,
                 "color": "0xffffffff"
             },
             "verticalPadding": 25.0
-        },
-        {
-            "type": "row",
-            "mainAxisAlignment": "spaceEvenly",
-            "crossAxisAlignment": "center",
-            "children": [
-                {
-                    "type": "column",
-                    "children": [
-                        {
-                            "type": "image",
-                            "fit": "cover",
-                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                            "size": {
-                                "width": 60.0,
-                                "height": 60.0
-                            },
-                            "borderRadius": 10.0,
-                            "verticalPadding": 15.0
-                        },
-                        {
-                            "type": "text",
-                            "data": "Yummy",
-                            "textAlignment": "center",
-                            "style": {
-                                "fontSize": 15.0,
-                                "color": "0xffffffff"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "column",
-                    "children": [
-                        {
-                            "type": "image",
-                            "fit": "cover",
-                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                            "size": {
-                                "width": 60.0,
-                                "height": 60.0
-                            },
-                            "borderRadius": 10.0,
-                            "verticalPadding": 15.0
-                        },
-                        {
-                            "type": "text",
-                            "data": "Delish",
-                            "textAlignment": "center",
-                            "style": {
-                                "fontSize": 15.0,
-                                "color": "0xffffffff"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "column",
-                    "children": [
-                        {
-                            "type": "image",
-                            "fit": "cover",
-                            "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-homemade-pizza-horizontal-1542312378.png",
-                            "size": {
-                                "width": 60.0,
-                                "height": 60.0
-                            },
-                            "borderRadius": 10.0,
-                            "verticalPadding": 15.0
-                        },
-                        {
-                            "type": "text",
-                            "data": "Fresh",
-                            "textAlignment": "center",
-                            "style": {
-                                "fontSize": 15.0,
-                                "color": "0xffffffff"
-                            }
-                        }
-                    ]
-                }
-            ]
         },
         {
             "type": "verticalSpacer",

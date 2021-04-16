@@ -53,12 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final kVerticalSpace = SizedBox(height: 10);
 
-  TextButton getButton(String text, String asset) => TextButton(
+  TextButton getButton(String text, String asset, {Color? color}) => TextButton(
       style: ButtonStyle(
           minimumSize:
               MaterialStateProperty.resolveWith((states) => Size(200, 80)),
           backgroundColor: MaterialStateProperty.resolveWith(
-              (states) => kButtonBackgroundColor)),
+              (states) => color ?? kPrimaryColorDark)),
       onPressed: () {
         loadJson("assets/$asset.json");
       },
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         backgroundColor: kPrimaryColorLight,
         appBar: AppBar(
-          backgroundColor: kButtonSplashColor,
+          backgroundColor: kPrimaryColorDark,
           elevation: 0,
           centerTitle: true,
           title: Text("JSON to Flutter UI Demo",
@@ -82,9 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               getButton('Open Foodr dialog', 'test_json'),
               kVerticalSpace,
-              getButton('Open Netflix dialog', 'netflix'),
+              getButton('Open Netflix dialog', 'netflix',
+                  color: Color(0xffe30813)),
               kVerticalSpace,
-              getButton('Open Abeg dialog', 'abeg'),
+              getButton('Open Abeg dialog', 'abeg', color: Color(0xff753ff6)),
             ],
           ),
         ));
