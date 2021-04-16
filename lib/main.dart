@@ -36,7 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    loadJson();
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+      loadJson();
+    });
   }
 
   void loadJson() async {
@@ -45,25 +47,104 @@ class _MyHomePageState extends State<MyHomePage> {
     _json = json.decode(data);
     _ui = JsonUI.fromJson(_json);
     setState(() {});
+    if (_ui != null) {
+      Navigator.of(context).push(PageRouteBuilder(
+          opaque: false,
+          pageBuilder: (context, primary, secondary) =>
+              JsonUIDialog(jsonUI: _ui!)));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: _ui != null ? _ui!.backgroundColor : Colors.white,
+        backgroundColor: kPrimaryColorLight,
         appBar: AppBar(
           backgroundColor: kButtonSplashColor,
           elevation: 0,
-          title: Text("JSON to Flutter UI",
+          centerTitle: true,
+          title: Text("JSON to Flutter UI Demo",
               style: TextStyle(color: kPrimaryColorLight)),
         ),
         body: Center(
-          child: _ui == null
-              ? CircularProgressIndicator()
-              : Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: _ui!.widgets,
-                ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Nothing to see here on gad",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.teal),
+              ),
+              SizedBox(height: 30),
+              if (_ui != null)
+                TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.resolveWith(
+                            (states) => kButtonBackgroundColor)),
+                    onPressed: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                          opaque: false,
+                          pageBuilder: (context, primary, secondary) =>
+                              JsonUIDialog(jsonUI: _ui!)));
+                    },
+                    child: Text('Open full screen dialog',
+                        style:
+                            TextStyle(fontSize: 15, color: kPrimaryColorLight)))
+            ],
+          ),
+        ));
+  }
+}
+
+class JsonUIDialog extends StatelessWidget {
+  final JsonUI jsonUI;
+  const JsonUIDialog({Key? key, required this.jsonUI}) : super(key: key);
+
+  void dismiss(BuildContext context) {
+    Navigator.of(context).pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: jsonUI.backgroundColor,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: jsonUI.backgroundColor,
+          elevation: 0,
+          actions: [
+            if (jsonUI.shouldShowDismiss)
+              FloatingActionButton(
+                  mini: true,
+                  backgroundColor: jsonUI.dismissButtonColor,
+                  child: Icon(
+                    Icons.close,
+                    color: jsonUI.dismissIconColor,
+                  ),
+                  onPressed: () {
+                    dismiss(context);
+                  }),
+          ],
+        ),
+        body: WillPopScope(
+          onWillPop: () {
+            if (jsonUI.isDismissWithBackbuttonEnabled) {
+              dismiss(context);
+            } else {
+              print(jsonUI.dismissErrorMessage);
+            }
+            return Future.value(false);
+          },
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: jsonUI.widgets,
+              ),
+            ),
+          ),
         ));
   }
 }

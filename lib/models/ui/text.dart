@@ -90,12 +90,12 @@ class JsonTextStyle {
     if (json['color'] != null) {
       return JsonTextStyle(
           fontSize: json['fontSize'],
-          fontWeight: json['fontWeight'],
-          textColor:
-              Color(int.tryParse(json['color']) ?? kPrimaryColorLight.value));
+          fontWeight: json['fontWeight'] ?? '',
+          textColor: Color(
+              int.tryParse(json['color'] ?? '') ?? kPrimaryColorLight.value));
     }
     return JsonTextStyle(
-        fontSize: json['fontSize'], fontWeight: json['fontWeight']);
+        fontSize: json['fontSize'], fontWeight: json['fontWeight'] ?? '');
   }
 
   TextStyle toTextStyle() {
